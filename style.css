@@ -2,6 +2,16 @@
 /* Looking for the color variables? They have been moved to the inline-styles file in the _includes folder, and pull variables from the site-settings folder in the _data folder.  */
 
 
+@font-face {
+        font-family: "Kona";
+        src: url("/fonts/Kona-Regular.woff2") format("woff2");
+}
+
+@font-face {
+        font-family: "Script";
+        src: url("/fonts/Luminaire.woff2") format("woff2");
+}
+
 
 .montserrat-regular {
   font-family: "Montserrat", sans-serif;
@@ -120,6 +130,17 @@ html {
 .inline-block { position: inline-block;}
 
 /* ------------ Backgrounds & Background Images  ----------------------- */
+.img-style-1 {
+  border-radius: 1rem;
+  border: 1px solid var(--dark-text);
+}
+
+.bg-img-index-1 {
+  background-color: var(--v-light);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  border: 1px solid var(--dark-text);
+}
 
 .bg-dark     { background-color: var(--dark);}
 .bg-featured { background-color: var(--featured);}
@@ -129,10 +150,25 @@ html {
 
 .bg-image {
     background-color: var(--light); /* Set a fall-back color while images are loading */ 
-    background-image: url('https://source.unsplash.com/8Ogfqvw15Rg/1600x1600');
+    background-image: url('/images/amy-baserga-hero-banner.jpg');    
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat;
+}
+
+.bg-hero {
+  background-image: url('/images/amy-baserga-hero-banner.jpg');
+}
+
+.bg-paper-1 {
+  background-image: url('/images/paper-background.png');
+  background-color: transparent;
+  background-size: contain;
+  background-position: center; 
+  background-repeat: no-repeat;
+  aspect-ratio: 2414 / 790;
+  margin: 1rem;
+  margin-top: 6rem;
 }
 
 .bg-overlay::after {
@@ -196,7 +232,12 @@ h2, h3, h4, h5, h6 {
   margin-bottom: 1.2rem;
 }
 
-h2 { font-size: 2rem; }
+h2 { 
+  font-size: 3.2rem;
+  font-family: 'Script', sans-serif;
+  font-weight: 400;
+ }
+
 h3 { font-size: 1.8rem; }
 h4 { font-size: 1.6rem; }
 h5 { font-size: 1.4rem; }
@@ -205,9 +246,9 @@ h6 { font-size: 1.2rem; }
 p, li {
   line-height: 1.4; 
   margin-bottom: 1rem;
-  font-family: 'Martel', serif; 
-  font-weight: 200;
-  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 400;
+  font-size: 1.4rem;
 }
 
 h2:last-child, 
@@ -236,6 +277,14 @@ p:last-child {
 
 .no-deco { text-decoration: none; }
 
+
+/* ------------ Position Absolute ------------ */
+.index-badge-1 {
+  position: absolute;
+  bottom: -2rem;
+  right: -5rem;
+  width: 11rem;
+}
 
 /* ------------ Buttons & Links ------------ */
 a {
@@ -277,12 +326,21 @@ p a:hover {
 
 
 /* ------------ Header & Hamburger Menu -------------- */
+.header-logo {
+  width: 14rem;
+}
+
 header {
     padding: 1rem 5%;
 }
 
-nav a {
-    padding: 0.25rem 0.5rem;
+header a {
+  font-family: 'Script', sans-serif;
+  font-size: 2.2rem;
+}
+
+header nav a {
+    padding: 0.25rem 1rem;
     display: inline-block;
     text-decoration: none;
 }

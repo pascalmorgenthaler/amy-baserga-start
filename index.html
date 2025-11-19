@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: index
 title: Homepage
 seo:
   title: 
@@ -11,9 +11,29 @@ seo:
 ---
 
 <!------------------------ Image Banner  ------------------------>
-<section class="padded">
-    <h1> MAKE EVERYTHING EDITABLE FROM THE BEGINNING - USE JEKYLL LOOPS, LAYOUTS AND INCLUDES TO MAKE IT EDITABLE FOR CLIENTS</h1>
-    <h1> USE DATA-SRC AND CLASS OF LAZY ON ANY IMG AND JUST CLASS OF LAZY ON ANY BG-IMAGE</h1>
+<section class="bg-image bg-hero">
+    {% include site-header.html %}
+
+    <div class="capped-width grid-top-spaceAround">
+      <div class="col-6 padded-1">
+        <div class="bg-img-index-1 relative">
+          <img src="/images/amy-baserga-index-1.jpg" class="img-style-1">
+          <h2 class="padded-t-1"> More than an athlete. </h2>
+          <div class="index-badge-1">
+            <img src="/icons/SVG/amy-baserga-sticker-pink.svg">
+          </div>
+        </div>
+      </div>
+      <div class="col-6 padded-1">
+        <img src="/images/amy-baserga-index-2.jpg" class="img-style-1">
+      </div>
+
+      <div class="col-12 padded bg-paper-1">
+        <h2> Über mich</h2>
+        <p> Ich bin Amy Baserga, 25 Jahre alt und komme aus Einsiedeln. Ich bin Biathletin im Schweizer Nationalteam und Olympionikin – mit viel Leidenschaft lebe ich meinen Traum als Spitzensportlerin. </p>
+        <a href="/mehr erfahren" class="button-1"></a>
+      </div>
+    </div>
 </section>
 
 
