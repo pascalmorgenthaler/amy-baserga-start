@@ -41,6 +41,7 @@ section { position: relative; }
 html { 
   scroll-behavior: smooth ;
   -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+  overflow-x: hidden;
 }
 
 
@@ -177,8 +178,25 @@ html {
     background-repeat: no-repeat;
 }
 
+.swiper-slide {
+  padding: 1rem;
+  background-color: var(--v-light);
+  border: 1px solid var(--dark-text);
+  border-radius: 1.5rem;
+}
+
+.swiper-slide .bg-image {
+  border-radius: 1.5rem;
+  border: 1px solid var(--dark-text);
+}
+
 .bg-hero {
   background-image: url('/images/amy-baserga-hero-banner.jpg');
+}
+
+.bg-hero-2 {
+  background-image: url('/images/bg-hero-2.jpg');
+  background-position: top !important;
 }
 
 .bg-paper-1 {
@@ -208,7 +226,16 @@ html {
 
 .schneeflocke-absolute-2 {
   position: absolute;
-  width: 2rem;
+  width: 3rem;
+  right: 25%;
+  bottom: 2rem;
+}
+
+.schneeflocke-absolute-3 {
+    position: absolute;
+    width: 3rem;
+    right: 25%;
+    top: 20rem;   
 }
 
 .bg-overlay::after {
@@ -265,6 +292,7 @@ a.bg-image { display: block;}
 body {
   font-family: 'Mulish', serif;  /* Add your font here */ 
   color: var(--dark-text);
+  overflow-x: hidden;
 }
 
 h2, h3, h4, h5, h6 {
@@ -324,6 +352,7 @@ p:last-child {
   bottom: -2rem;
   right: -5rem;
   width: 11rem;
+  z-index: 2;
 }
 
 /* ------------ Buttons & Links ------------ */
@@ -366,6 +395,103 @@ p a:hover {
 
 /* suggested additional styles 
 - .button-inverted, .button-subtle, .button-lg  */
+
+
+/* -------------- MARQUEEEE --------------------- */
+
+
+
+
+.marquee:hover .marquee__content.poh {
+  animation-play-state: paused;
+}
+
+.marquee__content.reverse {
+    animation-direction: reverse !important;
+}
+
+
+
+
+
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+  transform: translateX(calc(-50% - 1rem));
+  }
+}
+
+.marquee {
+  --gap: 3rem;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  list-style: none;
+  padding: 0;
+}
+
+.marquee__content.tenseconds {
+  animation: scroll 10s linear infinite;
+}
+
+.marquee__content.twentyfiveseconds {
+  animation: scroll 45s linear infinite;
+}
+
+.marquee__content.logos {
+  animation: scroll 35s linear infinite;
+}
+
+.marquee__content li,
+.marquee__content a {
+  display: flex;
+  align-items: center;
+  column-gap: 3rem;
+  text-decoration: none;
+  font-family: "Cowboy", sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 2.6rem;
+}
+
+.marquee__content li svg, .marquee__content li img {
+    vertical-align: middle;
+    height: 89px;
+    width: 167px;
+    display: inline-block;
+    object-fit: contain;
+}
+
+.h5.marquee {
+  font-size: calc(1em + 1.4vw);
+}
+
+.slider-text {
+  font-family: var(--font-ivy-family);
+}
+
+.marquee-style-2 li {
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0;
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+.bg-b-tb { 
+  border-top: 2px solid var(--dark-text);
+  border-bottom: 2px solid var(--dark-text);
+}
 
 
 /* ------------ Header & Hamburger Menu -------------- */
