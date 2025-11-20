@@ -129,6 +129,27 @@ html {
 .block { position: block;}
 .inline-block { position: inline-block;}
 
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-landschaft-van-index-1 {
+  width: 19rem;
+}
+
+.image-right-pulled {
+  position: relative;
+}
+
+.hero-expand {
+  margin-left: auto !important;
+  margin-right: -120px !important; /* Steuert wie weit es rechts rausgeht */
+  max-width: none !important; 
+  min-width: calc(100% + 300px) !important;
+}
+
 /* ------------ Backgrounds & Background Images  ----------------------- */
 .img-style-1 {
   border-radius: 1rem;
@@ -169,6 +190,25 @@ html {
   aspect-ratio: 2414 / 790;
   margin: 1rem;
   margin-top: 6rem;
+}
+
+.schneeflocke-absolute-1 {
+  border-radius: 50rem;
+  background-color: var(--v-light);
+  padding: 0.5rem;
+  position: absolute;
+  right: -1rem;
+  bottom: -1rem;
+}
+
+.schneeflocke-absolute-1 img {
+    min-width: 3rem;
+    height: 3rem;
+}
+
+.schneeflocke-absolute-2 {
+  position: absolute;
+  width: 2rem;
 }
 
 .bg-overlay::after {
@@ -309,7 +349,10 @@ p a:hover {
     text-decoration: none;
     line-height: 1;
     padding: 0.5rem 1.5rem;
-    border: 1px solid;
+    border: 1px solid var(--dark-text);
+    font-family: 'Kona', sans-serif;
+    background-color: var(--v-light);
+    border-radius: 7px;
 }
 
 .button:hover {
@@ -331,7 +374,7 @@ p a:hover {
 }
 
 header {
-    padding: 1rem 5%;
+    padding: 1rem;
 }
 
 header a {
