@@ -45,7 +45,16 @@ swiper_index:
   - image: /images/swiper-index/amy-baserga-swiper-index-33.jpg
   - image: /images/swiper-index/amy-baserga-swiper-index-34.jpg
   - image: /images/swiper-index/amy-baserga-swiper-index-35.jpg
-
+shop:
+  - image: /images/shop/shop-1.jpg
+    title: T-Shirt
+    price: CHF 35.-
+  - image: /images/shop/shop-3.jpg
+    title: Heftli
+    price: CHF 15.-
+  - image: /images/shop/shop-4.jpg
+    title: Mütze
+    price: CHF 25.-
 ---
 
 <!------------------------ Image Banner  ------------------------>
@@ -136,33 +145,53 @@ swiper_index:
 </div>
 
 
-    <section class="padded">
-      <!-- Slider main container -->
-      <div class="swiper-index">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          {% for swiper in page.swiper_index %}
-            <div class="swiper-slide">
-              <div class="bg-image landscape" style="background-image: url('{{ swiper.image }}');"></div>
-            </div>
-          {% endfor %}
+<section class="padded">
+  <!-- Slider main container -->
+  <div class="swiper-index">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      {% for swiper in page.swiper_index %}
+        <div class="swiper-slide">
+          <div class="bg-image landscape" style="background-image: url('{{ swiper.image }}');"></div>
         </div>
-        <!-- If we need pagination -->
-        <!-- <div class="swiper-pagination"></div> -->
-      
-        <!-- If we need navigation buttons -->
-        <!-- <div class="swiper-button-prev hide-md"> </div>
-        <div class="swiper-button-next hide-md"> </div> -->
-      
-        <!-- If we need scrollbar -->
-        <!-- <div class="swiper-scrollbar"></div> -->
-      </div>
-      <div class="try-to-slide">
-        <p> -> you can swipe here </p>
-      </div>
-  </section>
+      {% endfor %}
+    </div>
+    <!-- If we need pagination -->
+    <!-- <div class="swiper-pagination"></div> -->
+  
+    <!-- If we need navigation buttons -->
+    <!-- <div class="swiper-button-prev hide-md"> </div>
+    <div class="swiper-button-next hide-md"> </div> -->
+  
+    <!-- If we need scrollbar -->
+    <!-- <div class="swiper-scrollbar"></div> -->
+  </div>
+  <div class="try-to-slide">
+    <p> -> you can swipe here </p>
+  </div>
+</section>
 
+
+<section>
+  <div class="capped-width grid-spaceAround padded-c1">
+    <div class="col-12 padded-1">
+      <h2> Shop </h2>
+    </div>
+    {% for shop in page.shop %}
+    <div class="col-4 padded-1">
+      <div class="shop">
+        <img src="{{shop.image}}">
+        <h3 class="margin-t-1 shop-title"> {{shop.title}} </h3>
+        <p class="price"> {{shop.price}}</p>
+      </div>
+    </div>
+    {% endfor %}
+    <div class="col-12 padded-1 center">
+      <a href="/shop.html" class="button"> jetzt einkaufen </a>
+    </div>
+  </div>
+</section>
 
 <section class="bg-image bg-hero-2 tall-80">
 
@@ -179,3 +208,4 @@ swiper_index:
 
     </div>
 </section>
+

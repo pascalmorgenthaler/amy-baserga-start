@@ -68,6 +68,8 @@ html {
 .padded    { padding: 5%;   }
 .padded-lg { padding: 10%;  }
 
+.padded-c1 { padding: calc(5% - 1rem);}
+
 .padded-05 { padding: 0.5rem; }
 .padded-1  { padding: 1rem; }
 .padded-2  { padding: 2rem; }
@@ -269,7 +271,7 @@ html {
 
 a.bg-image { display: block;}
 
-.landscape     { padding-bottom: 66% ; }
+.landscape     { padding-bottom: 58% ; }
 .portrait-tall { padding-bottom: 175%; }
 .portrait      { padding-bottom: 125%; }
 .square        { padding-bottom: 100%; }
@@ -283,6 +285,16 @@ a.bg-image { display: block;}
 
 
 /* ------------ Typography Styles ----------------------- */
+.shop {
+  padding: 0.5rem;
+  background-color: var(--v-light);
+  border-radius: 10px;
+  border: 1px solid var(--dark-text);
+}
+.shop img {
+  border: 1px solid var(--dark-text);
+  border-radius: 10px;
+}
 
 .left    { text-align: left; }
 .right   { text-align: right; }
@@ -306,7 +318,15 @@ h2 {
   font-weight: 400;
  }
 
-h3 { font-size: 1.8rem; }
+h3 {
+   font-size: 1.5rem;
+   font-family: 'Kona', sans-serif;
+   }
+
+   .shop-title {
+    margin-bottom: 0.5rem;
+   }
+
 h4 { font-size: 1.6rem; }
 h5 { font-size: 1.4rem; }
 h6 { font-size: 1.2rem; }
@@ -360,18 +380,14 @@ a {
     color: inherit;
 }
 
-a:hover {
-  color: var(--featured-text); 
-}
+
 
 p a {
     text-decoration: none;
     border-bottom: 1px solid;
 }
 
-p a:hover { 
-  color: var(--featured-text); 
-}
+
 
 .button { 
     display: inline-block;
@@ -385,7 +401,7 @@ p a:hover {
 }
 
 .button:hover {
-    color: var(--featured-text);
+  background-color: var(--light);
 }
 
 .subtle-button {
@@ -513,9 +529,7 @@ header nav a {
     display: inline-block;
     text-decoration: none;
 }
-nav a:hover {
-  color: var(--featured-text);
-}
+
 
 /* ------------ Footer Styles -------------- */
 
@@ -818,7 +832,7 @@ button {
 }
 
 button:hover {
-  border: 1px solid var(--light);
+  background-color: var(--light);
 }
 
 /* ------------ Blogging elements  ----------------------- */
